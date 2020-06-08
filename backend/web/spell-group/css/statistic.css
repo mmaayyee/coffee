@@ -1,0 +1,136 @@
+.left{
+	float:left;
+}
+.clearfix{
+	clear:both;
+}
+p{
+	margin:0;
+}
+table{
+	 border-collapse: collapse;
+	 border:1px solid #ddd;
+}
+.statistic-wrap thead{
+	background: #f9f9f9;
+	border:1px solid #ddd;
+}
+.statistic-wrap input{
+	display: inline-block;
+	width:60%;
+	margin:0;
+	padding:0 3px;
+	text-align: center;
+
+}
+.statistic-wrap label{
+	font-size:14px;
+	font-weight: normal;
+	width:auto;
+}
+table tr.even, table tr.alt, table tr:nth-of-type(even){
+	background: none;
+}
+.statistic-wrap select{
+	display: inline-block;
+	width: 100px;
+    vertical-align: middle;
+	height: 26px;
+	/*border: 1px solid #ccc;
+	border-radius: 4px;*/
+	padding:3px 5px;
+	/*box-shadow: inset 0 1px 1px rgba(0, 0, 0, .4)*/
+}
+.title{
+	width:120px;
+	text-align:right;
+	margin-right:20px;
+	font-weight: bold;
+	font-size:16px;
+}
+.tabData,.tabmar{
+	width:80%;
+	text-align: center;
+	font-size:12px;
+}
+.tabData{
+	width:80% !important;
+}
+.tabData tr td,.tabData tr th,.detailData tr td,.detailData tr th{
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+	border-left:0;
+	padding:0;
+	font-size:14px;
+	border:1px solid #ddd;
+}
+/*排名*/
+.rank-wrap{
+	margin-top:20px;
+	position: relative;
+}
+.border{
+	margin:20px 0 20px;
+}
+.tabmar{
+	margin-left:138px;
+}
+.mgin{
+	margin-left:20px;
+}
+.btns{
+	display: inline-block;
+	padding:0 10px;
+	height: 25px;
+	line-height: 25px;
+	background:#286090;
+	border:0;
+	border-radius: 5px;
+	color:#fff;
+	font-size:14px;
+}
+.btns:active{
+	border:none;
+}
+.search{
+	position: static;
+}
+/*单团详细数据*/
+.detail-wrap{
+	position: relative;
+}
+.detailData{
+	width:90%;
+	margin-left:134px;
+}
+.detail-wrap .border{
+	width:95%;
+	margin:20px 0;
+}
+.detail-wrap input{
+	width:26%;
+	margin-left:5px;
+}
+.detail-wrap input[type="checkbox"]{
+	position: relative;
+	top:3px;
+	width:20px;
+}
+.timeline{
+	margin-left:139px;
+	margin:15px 0 0 139px;
+}
+.timeline p{
+	margin:0;
+}
+.noData{
+	display: none;
+	font-size:14px;
+	text-align: center;
+	color:#333;
+	margin:30px 0;
+}
+.statistic-wrap select#detailType,.statistic-wrap select#detailName{
+	width:26%;
+}

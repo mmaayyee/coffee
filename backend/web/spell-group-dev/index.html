@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>添加商品</title>
+  <link rel="stylesheet" type="text/css" href="/spell-group/vendor/element-ui/2.4.5/lib/theme-chalk/index.css">
+</head>
+
+<body>
+  <div id="app"></div>
+  <style>
+  input[type="file"] {
+    display: none;
+  }
+  </style>
+  <script>
+    var rootCoffeeStieUrl = "www.webcoffee.com/";
+    var rootData={"state":"1","data":{"coffee_product":[{"cf_product_id":"6","cf_product_name":"拿铁咖啡"},{"cf_product_id":"7","cf_product_name":"摩卡"},{"cf_product_id":"8","cf_product_name":"玛琪雅朵"},{"cf_product_id":"9","cf_product_name":"美式咖啡"},{"cf_product_id":"11","cf_product_name":"卡布奇诺"}],"details":{"main_title":"活动主标题","subhead":"活动副标题","begin_time":"2017-10-8 10:00:00","end_time":"2017-10-9 12:00:00","status":1,"type":2,"new_type":2,"duration":2.5,"price_ladder":[{"tuxedo_num":"2","group_price":99.66},{"tuxedo_num":"4","group_price":66.3}],"drink_num":"1","drink_ladder":[{"cf_product_id":"7","group_attached_num":"2"},{"cf_product_id":"6","group_attached_num":"1"}],"original_cost":"999","activity_img":['www.aabb.com','www.xinlang.com','www.cz.com'],"activity_details_img":['www.aa.com','www.xinlang.com','www.cz.com'],"activity_id":"6"}},"message":"添加拼团活动初始化"}
+    console.log(rootData);
+  </script>
+  <script type="text/javascript" src='/spell-group/vendor/vue/2.6.8/vue.js'></script>
+  <script type="text/javascript" src='/spell-group/vendor/element-ui/2.4.5/lib/index.js'></script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>日常任务</title>
+  <link rel="stylesheet" type="text/css" href="/distribution-daily-task/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/distribution-daily-task/css/distribution-daily-task.css">
+  <link rel="stylesheet" type="text/css" href="/distribution-daily-task/css/site.css">
+</head>
+<body>
+  <div id="app"></div>
+  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelleadby="myModalLabel" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                    <span aria-hidden="true"></span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">任务转交</h4>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="save">确认</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var rootInfoData = {
+  "dailyTaskList": {
+    "0": {
+      "userName": "未设置",
+      "2018-09-12": {
+        "buildNumber": 15,
+        "materialList": [],
+        "taskList": [{
+          "buildId": "733",
+          "buildName": "测试灯箱显示投放",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "3",
+          "buildName": "808测试设备",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "756",
+          "buildName": "111111111333",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "108",
+          "buildName": "808 测试设备2",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "343",
+          "buildName": "1101 四代标准测试设备",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "360",
+          "buildName": "1101 四代标准测试设备2",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "361",
+          "buildName": "1101 四代标准测试设备3",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "362",
+          "buildName": "1101 四代标准测试设备4",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "433",
+          "buildName": "浣花溪公园",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "570",
+          "buildName": "国创产业园五代研发设备1",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "551",
+          "buildName": "xp",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "560",
+          "buildName": "大学路1号院",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "576",
+          "buildName": "003",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "572",
+          "buildName": "测试603",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "598",
+          "buildName": "极诺五代测试007",
+          "type": "4",
+          "typeName": "清洗"
+        }]
+      },
+      "2018-09-13": {
+        "buildNumber": 20,
+        "materialList": [],
+        "taskList": [{
+          "buildId": "698",
+          "buildName": "国创产业园-201",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "108",
+          "buildName": "808 测试设备2",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "343",
+          "buildName": "1101 四代标准测试设备",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "360",
+          "buildName": "1101 四代标准测试设备2",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "361",
+          "buildName": "1101 四代标准测试设备3",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "362",
+          "buildName": "1101 四代标准测试设备4",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "433",
+          "buildName": "浣花溪公园",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "570",
+          "buildName": "国创产业园五代研发设备1",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "551",
+          "buildName": "xp",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "560",
+          "buildName": "大学路1号院",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "576",
+          "buildName": "003",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "572",
+          "buildName": "测试603",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "598",
+          "buildName": "极诺五代测试007",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "679",
+          "buildName": "测试906",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "736",
+          "buildName": "南京大厦测试",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "670",
+          "buildName": "测试902",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "733",
+          "buildName": "测试灯箱显示投放",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "741",
+          "buildName": "测试新框架",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "3",
+          "buildName": "808测试设备",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "756",
+          "buildName": "111111111333",
+          "type": "4",
+          "typeName": "清洗"
+        }]
+      },
+      "2018-09-14": {
+        "buildNumber": 19,
+        "materialList": [],
+        "taskList": [{
+          "buildId": "108",
+          "buildName": "808 测试设备2",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "343",
+          "buildName": "1101 四代标准测试设备",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "360",
+          "buildName": "1101 四代标准测试设备2",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "361",
+          "buildName": "1101 四代标准测试设备3",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "362",
+          "buildName": "1101 四代标准测试设备4",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "433",
+          "buildName": "浣花溪公园",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "570",
+          "buildName": "国创产业园五代研发设备1",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "551",
+          "buildName": "xp",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "560",
+          "buildName": "大学路1号院",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "576",
+          "buildName": "003",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "572",
+          "buildName": "测试603",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "598",
+          "buildName": "极诺五代测试007",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "679",
+          "buildName": "测试906",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "736",
+          "buildName": "南京大厦测试",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "670",
+          "buildName": "测试902",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "733",
+          "buildName": "测试灯箱显示投放",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "741",
+          "buildName": "测试新框架",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "3",
+          "buildName": "808测试设备",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "756",
+          "buildName": "111111111333",
+          "type": "4",
+          "typeName": "清洗"
+        }]
+      }
+    },
+    "wangxiwen": {
+      "userName": "王希文",
+      "2018-09-12": {
+        "buildNumber": 4,
+        "materialList": [],
+        "taskList": [{
+          "buildId": "736",
+          "buildName": "南京大厦测试",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "669",
+          "buildName": "国创产业园（投放验收测试）",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "735",
+          "buildName": "通景大厦",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "741",
+          "buildName": "测试新框架",
+          "type": "4",
+          "typeName": "清洗"
+        }]
+      },
+      "2018-09-13": {
+        "buildNumber": 2,
+        "materialList": [],
+        "taskList": [{
+          "buildId": "679",
+          "buildName": "测试906",
+          "type": "4",
+          "typeName": "清洗"
+        }, {
+          "buildId": "670",
+          "buildName": "测试902",
+          "type": "4",
+          "typeName": "清洗"
+        }]
+      }
+    }
+  },
+  "date": ["2018-09-12", "2018-09-13", "2018-09-14"],
+  "orgId": 2
+};
+    var rootOrgId = '2';
+  </script>
+  <script type="text/javascript" src="/distribution-daily-task/vendor/jquery-1.9.1.min.js"></script>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>

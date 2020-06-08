@@ -1,0 +1,217 @@
+.nav-tabs {
+    background-color: #fff;
+}
+.nav-tabs > li {
+    width: 50%;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: 0;
+    border-bottom: 3px solid #2d8ff4;
+    color: #3399ff;
+}
+.nav-tabs a {
+    font-size: .32rem;
+    text-align: center;
+    color: #000;
+}
+.nav-tabs .badge {
+    vertical-align: top;
+}
+#myTabContent {
+    text-align: center;
+    /*background-color: #fff;*/
+}
+    p{
+        margin-top: 5px;
+    }
+    .deliveryTaskStock1{
+        margin-top:3%;
+        display: inline-block;
+        width:30%;
+    }
+    .tex1{
+        margin-top:5px;
+        display: inline-block;
+        vertical-align: top;
+        line-height: 34px;
+        margin-left: 1%;
+    }
+    .text-type{
+        margin-top:10px;
+        display: inline-block;
+        vertical-align: top;
+        line-height: 34px;
+        margin-left: 1%;
+    }
+    .delivery_content,.table-bordered{
+        border:1px solid #ccc;
+        padding: 10px;
+        overflow: hidden;
+    }
+    .tex2{
+        line-height: 34px;
+    }
+    .tex3{
+        display: inline-block;
+        line-height: 34px;
+        margin-left: 1%;
+        margin-top: 2.5rem;
+    }
+    .form-inline{
+        margin-top:3% ;
+    }
+    #malfunction_reason{
+        margin-bottom: 3%;
+    }
+    .delivery_content .form-group{
+        margin: 5px 2px 12px 0px;
+    }
+    dl {
+        margin-bottom: 3%;
+    }
+    .modal{
+        height:100%;
+        overflow: hidden;
+        filter: Alpha(opacity=50);
+        background:rgba(0,0,0,0.5);
+    }
+    .modal-header {
+        border-color:#2e6da4;
+        padding: 10px;
+    }
+    h4{
+        font-size: 22px;
+        margin: 0;
+    }
+    .modal-backdrop{
+        display: none;
+    }
+    .modal-dialog{
+        width:80%;
+        margin-top: 25%;
+        margin-left: 10%;
+    }
+    .modal .title{
+        font-size: 18px;
+        margin-bottom: 5px;
+        letter-spacing: 2px;
+    }
+    .modal-footer{
+        text-align: center;
+    }
+    .modal-footer .btn{
+        width:35%;
+    }
+    .modal-footer .btn + .btn {
+        margin-left: 25px;
+    }
+    .label1{
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .line1{
+        display: inline-block;
+        width:90%;
+    }
+    .line2{
+        vertical-align: top;
+        margin-top: 6px;
+        display: inline-block;
+        width:5%;
+    }
+    .select2-container--bootstrap {
+        display: inline-block;
+    }
+    .groups .form-group{
+        vertical-align: top;
+    }
+    .materiel-style{
+        width:40%
+    }
+    .materiel-style{
+        width:40%
+    }
+
+    .wrap > .container {
+        padding: 0; 
+    }
+    .container {
+         padding-right: 0; 
+         padding-left: 0; 
+    }
+    #ios {
+        padding: 10px;
+    }
+    #home > .table-bordered,
+    #home > .form-group,
+    .form-group-btn {
+        margin: 5%;
+    }
+    .distribution {
+        background-color: #f0eff3;
+    }
+    .block-a {
+        margin: .32rem 0 .15rem;
+        text-align: center;
+        background-color: #fff;
+    }
+    .block-a img {
+        margin: 0 .125rem .18rem 0;
+        width: 1.54rem;
+        height: 1.54rem;
+    }
+    .block-a img:nth-child(4),
+    .block-a img:nth-child(8) {
+        margin-right: 5px;
+    }
+    .block-a .btn,
+    .block-b .btn {
+        margin: .25rem 0;
+        width: 6.8rem;
+        color: #fff;
+        background-color: #3399ff;
+    }
+    .block-b {
+        text-align: center;
+        background-color: #fff;
+    }
+    .task-list .row {
+        padding: .25rem 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .col-xs-4,
+    .col-xs-8 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .task-list-state {
+        padding: 3px;
+    }
+    .wash{
+        border-bottom: 1px solid #f0eff3;
+    }
+    .wash-date{
+        margin-left: 122px;
+        margin-bottom: 10px
+    }
+    .wash-state{
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-left: 59px;
+    }
+    .change-date{
+        margin-left: 122px;
+        margin-bottom: 10px;
+    }
+    .change-list{
+        width: 215px;
+        margin-left: 122px;
+        margin-bottom: 10px;
+    }
+    .change-state{
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }

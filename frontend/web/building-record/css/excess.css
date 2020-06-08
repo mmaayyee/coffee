@@ -1,0 +1,11 @@
+.nearby-position-item{
+  border-bottom: 1px solid #eee;
+}
+.nearby-position-item-name{
+  margin-left: 0.2rem;
+}
+.nearby-position-item-address{
+  font-size: 0.26rem;
+  color: #ccc;
+  margin-left: 0.2rem;
+}

@@ -1,0 +1,89 @@
+body,html
+{
+    margin: 0;
+    padding: 0;
+}
+#app
+{
+    width: 100%;
+    height: 100%;
+}
+.charts {
+  width: 920px;
+  height: 450px;
+}
+.download-img {
+    width: 920px;
+    text-align: right;
+}
+.download-img a{
+    position: relative;
+    top: 23px;
+    z-index: 1000;
+}
+.el-table-common {
+    width: 100%;
+    margin:10px 0;
+}
+.el-table{
+    color: #666;
+}
+.el-table thead {
+    font-weight: 500;
+}
+.el-table th {
+    color: #666;
+}
+.el-table .cell {
+  text-align: center;
+}
+.div-center {
+    text-align: center;;
+    width:100%;
+    margin:0 auto;
+    margin-bottom: 20px;
+}
+.content-body
+{
+    width: auto;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+}
+.div-center
+{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.sub-title
+{
+    font-size: 18px;
+    line-height: 30px;
+    color: #606266;
+    font-weight: bold;
+    margin-top: 20px;
+}
+table.gridtable {
+    font-size:14px;
+    color:#666;
+    border-width: 1px;
+    border-color: #ddd;
+    border-collapse: collapse;
+    margin: 8px 0;
+    width: 100%;
+}
+table.gridtable th {
+    border-width: 1px;
+    padding: 12px 8px;
+    border-style: solid;
+    border-color: #ddd;
+    background-color: #f9f9f9;
+}
+table.gridtable td {
+    border-width: 1px;
+    padding: 12px 8px;
+    border-style: solid;
+    border-color: #ddd;
+    background-color: #ffffff;
+}

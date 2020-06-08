@@ -1,0 +1,32 @@
+{
+    "name": "life2016/yii2-tagsinput",
+    "description": "",
+    "type": "yii2-extension",
+    "keywords": [
+        "yii2",
+        "extension",
+        "yii2-tagsinput",
+        "yii2 tags input"
+    ],
+    "homepage": "https://github.com/ran1990/yii2-tagsinput.git",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "ran",
+            "email": "r503948796@163.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "life2016/bootstrap-tagsinput": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "wbraganca\\tagsinput\\": "src"
+        }
+    }
+}

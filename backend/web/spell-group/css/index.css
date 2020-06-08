@@ -1,0 +1,48 @@
+
+a{
+	color: black
+}
+/*.sort-table th{
+	border: #ccc 1px solid;
+	width: 200px;
+	height: 50px;
+	border-top: 0px;
+	text-align: center;
+	background-color: #eee;
+}
+.sort-table p{
+	font-size: 20px;
+}*/
+.sort-container button{
+	padding: 2px 25px;
+	margin: 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 600px;
+/*  height: 300px;*/
+  background-color: #fff;
+/*  margin: 100px auto;*/
+}
+
+.content > table {
+  width: 100%;
+}
+
+.content > table > tbody {
+  width: 100%;
+}
+
+.content > table td,.content > table th {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid #333;
+}

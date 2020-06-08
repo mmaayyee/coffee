@@ -1,0 +1,102 @@
+
+
+/*移动端*/
+    #mob-menu{
+     display: block;
+    }
+    iframe{
+        display: block;
+        clear:both;
+        width:100% !important;
+        height: auto;
+        float:right;
+    }
+    #Intelligent_left{
+        /*display: none !important;*/
+        width:150px;
+        position: absolute;
+        left:-150px;
+        top:70px;
+    }
+    #Intelligent_title{
+        position: absolute;
+        right:0;
+        top:60px;
+        background:#2e4c68;
+        margin-left:0;
+        margin-right:0;
+        display: none;
+    }
+    #Intelligent_title span{
+        width:60px;
+        display: block;
+        clear:both;
+        padding:0 0.3rem;
+        height: 45px;
+        line-height: 45px;
+        margin-right:0;
+    }
+    .header input{
+        background: none;
+        width:60px;
+        height: 60px;
+        line-height: 60px;
+        color:#fff;
+        text-align:center;
+        margin-top:0;
+    }
+    #Intelligent_cont>div nav{
+        width:100%;
+    }
+    .navbar-inverse .navbar-collapse,.w2-collapse{
+        width:100%;
+    }
+    .navbar .nav{
+        width:100%;
+    }
+    .navbar-nav>li{
+        width:100%;
+    }
+    .index-username {
+        display: none;
+    }
+    .navslidein {
+        -webkit-animation: navslideinani 0.3s ease-out forwards;
+        animation: navslideinani 0.3s ease-out forwards;
+    }
+    .navslideout {
+        -webkit-animation: navslideoutani 0.3s ease-out forwards;
+        animation: navslideoutani 0.3s ease-out forwards;
+    }
+    @-webkit-keyframes navslideinani {
+        from {
+            -webkit-transform: translateX(0);
+        }
+        to {
+            -webkit-transform: translateX(150px);
+        }
+    }
+    @keyframes navslideinani {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(150px);
+        }
+    }
+    @-webkit-keyframes navslideoutani {
+        from {
+            -webkit-transform: translateX(150px);
+        }
+        to {
+            -webkit-transform: translateX(-5px);
+        }
+    }
+    @keyframes navslideoutani {
+        from {
+            transform: translateX(150px);
+        }
+        to {
+            transform: translateX(-5px);
+        }
+    }

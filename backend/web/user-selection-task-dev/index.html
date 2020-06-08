@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>User Selection Task</title>
+  <link rel="stylesheet" type="text/css" href="/user-selection-task/vendor/element-ui/2.4.5/lib/theme-chalk/index.css">
+  <style>
+input[type="file"]{
+  display:none;
+}
+  </style>
+  <script>
+  var rootCoffeeStieUrl; //上线修改为空
+  var rootUpdateData; //修改时数据
+  var rootData = { //接受初始化数据
+    "selection_task_id":"",//用户筛选ID
+    "reference_task":"3",//选中参考任务ID
+    "selection_task_name": "用户筛选测试",
+    "reference_task_id": [{//参考任务列表
+        "id": "1",
+        "name": "筛选任务1"
+      },
+      {
+        "id": "22",
+        "name": "筛选任务2"
+      },
+      {
+        "id": "3",
+        "name": "筛选任务3"
+      }
+    ],
+    "validate_mobile": [
+      "18211172615",
+      "15863592569"
+    ],
+    "conditionTypeList": {
+      "1": "楼宇点位",
+      "2": "注册时间",
+      "3": "最近消费商品",
+      "4": "消费点位",
+      "5": "付费时间",
+      "6": "消费城市",
+      "7": "杯均价",
+      "8": "消费频次",
+      "9": "企业导入",
+      "10": "已有任务",
+      "11": "导入用户"
+    },
+    "addConditionTypeTemp": {
+      "1": {
+        "cityList": {
+          "北京市": "北京",
+          "上海市": "上海",
+          "山东省": "山东"
+        },
+        "buildTypeList": {
+          "1": "公司",
+          "2": "写字楼",
+          "3": "展会",
+          "4": "学校",
+          "5": "商场"
+        },
+        "equipTypeList": {
+          "1": "九盎司",
+          "2": "12盎司",
+          "3": "四代标准"
+        }
+      },
+      "2": [],
+      "3": {
+        "consumeGoodList": {
+          "6": "摩卡",
+          "8": "玛琪雅朵",
+          "9": "美式咖啡"
+        },
+        "equipTypeList": {
+          "1": "九盎司",
+          "2": "12盎司",
+          "3": "四代标准"
+        }
+      },
+      "4": {
+        "cityList": {
+          "北京市": "北京",
+          "上海市": "上海",
+          "山东省": "山东"
+        },
+        "buildTypeList": {
+          "1": "公司",
+          "2": "写字楼",
+          "3": "展会",
+          "4": "学校",
+          "5": "商场"
+        },
+        "equipTypeList": {
+          "1": "九盎司",
+          "2": "12盎司",
+          "3": "四代标准"
+        }
+      },
+      "5": [],
+      "6": {
+        "cityList": {
+          "北京市": "北京",
+          "上海市": "上海",
+          "山东省": "山东"
+        }
+      },
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": {
+        "taskList": {
+          "1": "筛选任务1",
+          "2": "筛选任务2",
+          "3": "筛选任务3"
+        }
+      },
+      "11": []
+    },
+    "updateConditionTemp": [
+
+      {
+        "condition": [{
+          "pay_start_time": "2018-01-02 10:00:05",
+          "pay_end_time": "2018-01-08 12:00:05",
+          "is_pay": "1"
+        }],
+        "logic_relation": "",
+        "logic_type": "5"
+      },
+      {
+        "condition": [{
+          "pay_start_time": "2017-12-02 10:00:05",
+          "pay_end_time": "2018-02-08 12:00:05",
+          "is_pay": "0"
+        }],
+        "logic_relation": "or",
+        "logic_type": "5"
+      },
+      {
+        "condition": [{
+          "register_start_time": "2018-01-02 10:00:05",
+          "register_end_time": "2018-01-08 12:00:05",
+        }],
+        "logic_relation": "and",
+        "logic_type": "2"
+      },
+      {
+        "condition": {
+          "company_name_list": [
+            "咖啡零点吧",
+            "三里屯",
+            "咖啡零点吧多功能厅",
+            "机场咖啡厅",
+            "三代测试机"
+          ],
+          "company_name_path": "2017-10-5.txt"
+        },
+        "logic_relation": "not_in",
+        "logic_type": "9"
+      },
+      // {
+      //   "condition": {
+      //     "start_time": "2017-12-02 10:00:05",
+      //     "end_time": "2018-02-08 12:00:05",
+      //     "list": [
+      //       {
+      //       "logical_relation": ">=",
+      //       "after_purchase_num": "10.5"
+      //       }
+      //     ]
+      //   },
+      //   "logic_relation": "not_in",
+      //   "logic_type": "8"
+      // },
+      // {
+      //   "condition": {
+      //     "start_time": "2017-12-02 10:00:05",
+      //     "end_time": "2018-02-08 12:00:05",
+      //     "recent_pay_num": 2,
+      //     "list":[
+      //       {
+      //         "logical_relation":">=",
+      //         "price":"10.5"
+      //       }
+      //     ]
+      //   },
+      //   "logic_relation": "or",
+      //   "logic_type": "7"
+      // },
+      //    {
+      //   "condition": {
+      //     "city": [
+      //       "北京市",
+      //       "上海市"
+      //     ],
+      //     "build_type": [
+      //       "1",
+      //       "2",
+      //       "3"
+      //     ],
+      //     "equip_type": [
+      //       "1",
+      //       "2",
+      //       "3"
+      //     ],
+      //     "start_time": "2017-12-02 10:00:05",
+      //     "end_time": "2018-02-08 12:00:05",
+      //     "recent_consume_num": "2",
+      //     "build_list": [
+      //       "楼宇",
+      //       "大厦"
+      //     ]
+      //   },
+      //   "logic_relation": "or",
+      //   "logic_type": "4"
+      // },
+
+      // {
+      //   "condition":{
+      //     "user_mobiles": [
+      //       "18211172615",
+      //       "13863592569"
+      //     ],
+      //     "user_mobiles_path": "",
+      //   },
+      //   "logic_relation": "not_in",
+      //   "logic_type": "11"
+      // },
+      // {
+      //   "condition":{
+      //     "selection_task_id": [
+      //       "1",
+      //       "2"
+      //     ]
+      //   },
+      //   "logic_relation": "not_in",
+      //   "logic_type": "10"
+      // }
+    ]
+  }
+  var rootCoffeeStieUrl = "http://www.webcoffee.com/";
+  </script>
+  <script type="text/javascript" src='/user-selection-task/vendor/vue/2.6.8/vue.js'></script>
+  <script type="text/javascript" src='/user-selection-task/vendor/element-ui/2.4.5/lib/index.js'></script>
+</head>
+
+<body>
+  <div id="app"></div>
+</body>
+
+</html>

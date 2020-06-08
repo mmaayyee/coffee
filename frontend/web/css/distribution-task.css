@@ -1,0 +1,81 @@
+body{
+    background-color: white;
+}
+.row {
+    margin: 0;
+    border-bottom: 1px solid #f0eff3;
+}
+.nav-tabs {
+    background-color: #fff;
+}
+.nav-tabs > li {
+    width: 50%;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: 0;
+    border-bottom: 3px solid #2d8ff4;
+    color: #3399ff;
+}
+.nav-tabs a {
+    font-size: .32rem;
+    text-align: center;
+    color: #000;
+}
+.nav-tabs .badge {
+    vertical-align: top;
+}
+#myTabContent {
+    text-align: center;
+    /*background-color: #fff;*/
+}
+.head-line {
+    margin-bottom: .12rem;
+    height: 1.7rem;
+    line-height: .9rem;
+    font-size: .3rem;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 5px solid #f0eff3;
+}
+.head-line a {
+    display: inline-block;
+    margin-left: 1.3rem;
+    font-size: .32rem;
+    vertical-align: top;
+    margin-top: -0.85rem;
+}
+.panel-body {
+    padding: 0;
+    vertical-align: middle;
+    background-color: #fff;
+}
+.panel-body p {
+    color: #666;
+    margin: .3rem 0;
+}
+.panel-body label{
+    font-weight: 400;
+}
+hr {
+    margin: 0;
+    margin-left: .24rem;
+}
+.inline-btn {
+    position: relative;
+    background-color: white;
+    padding-top: .4rem;
+}
+.checkbox {
+    position: absolute;
+    top: -.1rem;
+    left: .4rem;
+}
+.btn-primary {
+    width: 4rem;
+}
+.row .col-xs-4:nth-child(1){
+    text-align: left;
+}
+.col-xs-3{
+    text-align: left;
+}

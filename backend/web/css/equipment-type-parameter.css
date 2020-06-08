@@ -1,0 +1,44 @@
+html{
+  font-size: 14px;
+}
+.equipmentType{
+  padding: 1rem;
+}
+.parameter{
+  padding: 1rem;
+}
+.select{
+  width: 14.5rem;
+}
+option{
+  height: 3rem;
+}
+.add-row{
+  margin-bottom: 1rem;
+}
+.add-row input{
+  height: 2.5rem;
+}
+.add-row span{
+  display: inline-block;
+  padding: 1rem;
+}
+.save{
+  margin-left: 3rem;
+}
+.edit{
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.delete{
+  
+}
+.top{
+  width: 5rem;
+}
+.bottom{
+  width: 5rem;
+}
+.localtions{
+  width: 5rem;
+}

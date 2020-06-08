@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>支付方式</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/javascript">
+  var rootCoffeeStieUrl = "http://erpbacktest.cofffee08test.com/"
+  var rootPayTypeData = {
+    "0":{
+        "name":"银联支付",
+        "discount_strategy": {
+            "0":"95折",
+            "1":"立减2元"
+        }
+    },
+    "1":{
+        "name":"招行支付",
+        "discount_strategy": {
+            "0":"8折",
+            "1":"立减5元"
+        }
+    }
+};
+  var rootData = {
+    "id":"1",
+    "pay_type_icon_url":"",
+    "qr_bg_url":"",
+    "is_support_strategy":1,
+    "is_show":1,
+    "default_strategy":"1",
+    "serial_id":"100",
+    "is_use_build":1
+}
+  </script>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>

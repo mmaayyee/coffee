@@ -1,0 +1,74 @@
+.wrap > .container{
+	padding: 0;
+}
+.title{
+	height: .98rem;
+	line-height: .98rem;
+	text-align: center;
+	font-size: .34rem;
+	color: #333;
+}
+.txt{
+	margin-left: .28rem;
+	line-height: .67rem;
+	font-size: .3rem;
+	color: #333;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+}
+.txt p{
+	margin: 0;
+}
+.txt span{
+	display: inline-block;
+	width: 1.8rem;
+}
+form{
+	margin: .28rem;
+}
+.table{
+	width: 7.02rem;
+	font-size: .28rem;
+	text-align: center;
+	vertical-align: middle;
+}
+.table button{
+	border: none;
+    outline: none;
+    background-color: #fff;
+	width: .52rem;
+	height: .52rem;
+	background-image: url('/images/btn-icon.png');
+    background-repeat: no-repeat;
+    background-size: 1.4rem .7rem;
+}
+.table .delete-btn{
+	background-position: -.09rem -.09rem;
+}
+.table .add-btn{
+    background-position: -.79rem -.09rem;
+}
+.table input{
+	border: none;
+    outline: none;
+    background-color: #fff;
+	display: inline-block;
+	width: 1rem;
+	padding: 0 .1rem ;
+	line-height: .52rem;
+	vertical-align: top;
+	text-align: center;
+}
+.save{
+	position: fixed;
+	bottom: .54rem;
+	left: .36rem;
+	width: 6.8rem;
+	height: .9rem;
+	font-size: .34rem;
+	color: #fff;
+	z-index: 100;
+}
+.btn-primary{
+	background-color: #3399ff;
+}

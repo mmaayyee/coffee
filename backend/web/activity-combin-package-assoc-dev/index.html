@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>自组合套餐管理</title>
+  <link rel="stylesheet" type="text/css" href="/activity-combin-package-assoc/vendor/element-ui/2.4.5/lib/theme-chalk/index.css">
+</head>
+
+<body>
+  <div id="app"></div>
+  <style>
+  input[type="file"] {
+    display: none;
+  }
+
+  </style>
+  <script type="text/javascript">
+  /*rootList=<?php echo $list; ?>;
+      rootTaskId = '<?php echo $id; ?>';
+      rootCoffeeStieUrl = '<?php echo Yii::$app->params['fcoffeeUrl']; ?>';*/
+  rootCoffeeStieUrl = "http://www.webcoffee.com/";
+  //城市
+  rootCityList = { "北京": "北京市", "成都": "成都市", "广州": "广州市", "武汉市": "武汉市", "上海": "上海市", "天津市": "天津市", "济南市": "济南市", "通辽市": "通辽市", "广东": "广东" };
+  //商品
+  rootPointProductList = { "online_product": [{ "product_id": "56" ,  "product_name": "鲜萃鸳鸯奶茶" }, { "product_id": "60", "product_name": "泡沫巧克力(含糖)活动" }, { "product_id": "82" , "product_name": "0.8°冰拿铁咖啡" }, { "product_id": "83" , "product_name": "0.8°冰卡布奇诺" }, { "product_id": "84" ,  "product_name": "7个料盒出粉量测试" }, { "product_id": "85" ,  "product_name": "0.8°冰奶特咖啡" }, { "product_id": "86" ,  "product_name": "0.8°冰牛奶咖啡" }], "all_product": [{ "product_id": "9" ,  "product_name": "美式咖啡" }, { "product_id": "11" ,  "product_name": "卡布奇诺(含糖)" }, { "product_id": "13" ,  "product_name": "香草拿铁" }, { "product_id": "15" ,  "product_name": "香草咖啡" }, { "product_id": "16" ,  "product_name": "牛奶咖啡" }, { "product_id": "17" ,  "product_name": "香草卡布奇诺(含糖)" }, { "product_id": "18" ,  "product_name": "热巧克力(含糖)" }, { "product_id": "19" ,  "product_name": "泡沫巧克力(含糖)" }, { "product_id": "22" ,  "product_name": "热菠萝" }, { "product_id": "23" ,  "product_name": "热芒果" }, { "product_id": "24" ,  "product_name": "热MIX" }, { "product_id": "25" ,  "product_name": "冰纤C-菠萝" }, { "product_id": "75" ,  "product_name": "香草摩卡---无---无--张目雨" }, { "product_id": "76" ,  "product_name": "香草拿铁" }, { "product_id": "77" ,  "product_name": "热MIX" }, { "product_id": "82" ,  "product_name": "0.8°冰拿铁咖啡" }], "selection_product": [{ "product_id": "7" ,  "product_name": "摩卡" }, { "product_id": "8" , "product_name": "玛琪雅朵" }, { "product_id": "14" ,  "product_name": "奶特咖啡(含糖)2" }, { "product_id": "254" ,  "product_name": "哈哈哈哈" }] };
+
+  // 优惠券套餐
+  rootPackageCouponList = [{"group_id":"2","group_name":"测试四元"},{"group_id":"4","group_name":"茉莉花套餐1"},{"group_id":"7","group_name":"免费领取多次"},{"group_id":"6","group_name":"咖啡coffee"},{"group_id":"9","group_name":"20170602关注公众号测试"},{"group_id":"12","group_name":"线上注册免费大礼包"},{"group_id":"11","group_name":"注册享首杯优惠"},{"group_id":"13","group_name":"0601儿童节大礼包"},{"group_id":"15","group_name":"首杯免费大礼包"},{"group_id":"16","group_name":"15元注册礼包"},{"group_id":"17","group_name":"50元注册礼包"},{"group_id":"18","group_name":"6月8日"},{"group_id":"19","group_name":"添加优惠券到个人账户"},{"group_id":"20","group_name":"城市优惠策略20170717"},{"group_id":"22","group_name":"线上注册优惠策略"},{"group_id":"21","group_name":"楼宇优惠策略"},{"group_id":"23","group_name":"口令红包测试"},{"group_id":"24","group_name":"808测试"},{"group_id":"25","group_name":"财务测试"},{"group_id":"26","group_name":"测试"},{"group_id":"27","group_name":"1518"},{"group_id":"28","group_name":"1212"},{"group_id":"30","group_name":"mf"},{"group_id":"14","group_name":"121"},{"group_id":"31","group_name":"nt"},{"group_id":"33","group_name":"mk"},{"group_id":"34","group_name":"my"},{"group_id":"29","group_name":"9888"},{"group_id":"38","group_name":"1"},{"group_id":"40","group_name":"大套餐"},{"group_id":"42","group_name":"兑换券"},{"group_id":"43","group_name":"8元"},{"group_id":"44","group_name":"0"},{"group_id":"45","group_name":"满减了"},{"group_id":"46","group_name":"小娟"},{"group_id":"47","group_name":"兑换1"},{"group_id":"48","group_name":"测试--雪"},{"group_id":"49","group_name":"测试使用"},{"group_id":"50","group_name":"测试使用1"},{"group_id":"52","group_name":"zmh"},{"group_id":"41","group_name":"兑换"},{"group_id":"53","group_name":"gt"},{"group_id":"54","group_name":"gtw"},{"group_id":"55","group_name":"shi"},{"group_id":"58","group_name":"空的"},{"group_id":"59","group_name":"单品代金券"},{"group_id":"60","group_name":"套餐"},{"group_id":"61","group_name":"玛琪雅朵"},{"group_id":"39","group_name":"你好"},{"group_id":"64","group_name":"zmh1212-1"},{"group_id":"65","group_name":"测试城市策略"},{"group_id":"66","group_name":"腊八活动-五折券"},{"group_id":"36","group_name":"Q"},{"group_id":"68","group_name":"拉新活动新用户"},{"group_id":"8","group_name":"首杯免费测试"},{"group_id":"69","group_name":"拉新活动分享者"},{"group_id":"70","group_name":"测试优惠券"}];
+  // 单优惠券
+  rootSingleCouponList = {"1":"免费咖啡券","7":"3元通用代金券","8":"4元通用代金券","9":"6元代金券","24":"合作咖啡券","30":"测试咖啡券","31":"客户咖啡券","34":"内部咖啡券","40":"7元代金券","41":"8元代金券","42":"9元代金券","44":"单品代金券","49":"冰饮产品8元代金券","50":"单品指定价格券（奶茶，冰饮系列）","53":"通用满减券满10减9.99","54":"通用定额券","55":"拿铁2元代金券","56":"0.01指定价格","57":"2元单品满减券","58":"通用指定价格券（0.01）","59":"2折通用折扣券","60":"单品9折折扣券","63":"我也不知道用什么名冰奶特","64":"通用8折折扣券","65":"通用满减券","68":"单品满减券满108减17.99","69":"9.5折折扣券","70":"优惠","71":"指定价格券","73":"玛琪雅朵兑换券","74":"美式咖啡5元结算券","75":"11","76":"2","77":"券","79":"拿铁咖啡满18元减9元","80":"全场88折","81":"卡布奇诺8元结算券","82":"满50减20","83":"全场1折","84":"冰拿铁2折","85":"免费测试券","86":"满15减10元","87":"香草拿铁6.8元结算券","88":"满11元立减9元券","89":"拿铁兑换券","90":"多款产品兑换券","91":"拿铁兑换券","92":"通用兑换券","93":"客户兑换券","94":"测试1","95":"测试兑换券","96":"111","97":"2121","98":"通用兑换券","99":"6元代金券","100":"限时优惠券","101":"限时优惠券","102":"限日期优惠券","103":"限时段优惠券","104":"限时折扣券","105":"限时段5元代金券","106":"限时满减券","107":"限时指定价格券","108":"美式咖啡满减券","109":"拿铁咖啡折扣券","110":"4元单品代金券","111":"3元单品代金券","112":"臻选转化兑换券","115":"臻选转化兑换券","116":"臻选转化兑换券","118":"20171124","119":"转化券","120":"普通转化券","121":"兑换券01","122":"测试臻选1","123":"测试兑换券","124":"测试兑换券","125":"5折券","126":"8元抵扣券","127":"全场立减8元","128":"全场5折","129":"全场满12元立减8元","130":"6元代金券","131":"5元代金券","132":"周美华测试","134":"测试时间段","137":"22222","138":"5.8元通用券","139":"0410","140":"0410兑换","459":"10元代金券","460":"1元结算券","595":"集咖啡赠送券","596":"集咖啡优惠券"};
+
+// 编辑时数据
+var rootActivityInfo={};
+  </script>
+  <script type="text/javascript" src='/activity-combin-package-assoc/vendor/vue/2.6.8/vue.js'></script>
+  <script type="text/javascript" src='/activity-combin-package-assoc/vendor/element-ui/2.4.5/lib/index.js'></script>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>

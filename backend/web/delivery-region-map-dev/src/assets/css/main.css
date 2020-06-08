@@ -1,0 +1,14 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#app{
+	height: 100%;
+	width: 100%;
+}
+.content-body{
+	width: auto;
+	height: auto;
+	margin: 10px;
+	padding-bottom: 20px;
+}

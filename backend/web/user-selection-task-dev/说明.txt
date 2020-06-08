@@ -1,0 +1,4 @@
+1，把文件夹名字改成项目名称
+2，进入命令行，运行 cnpm install 安装
+3，npm start 启动本地服务
+4，需要发布的时候运行 npm run build

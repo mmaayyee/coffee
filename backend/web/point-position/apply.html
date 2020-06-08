@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css"/>
+<body>
+    <div id="app">
+        <el-form :inline="true" :model="formInline" class="demo-form-inline">
+          <el-form-item label="需求类别">
+                <el-select v-model="formInline.apply_type" clearable placeholder="需求类别">
+                    <el-option label="发布点位" value="0"></el-option>
+                    <el-option label="投放设备" value="1"></el-option>
+                </el-select>
+            </el-form-item>
+            <el-form-item label="手机号">
+                <el-input v-model="formInline.mobile" placeholder="手机号"></el-input>
+            </el-form-item>
+            <el-form-item label="意向区域">
+                <el-input v-model="formInline.intent_area" placeholder="意向区域"></el-input>
+            </el-form-item>
+            <el-form-item>
+                <el-button type="primary" @click="onSubmit">查询</el-button>
+            </el-form-item>
+            <el-form-item>
+                <el-button type="primary" v-if="pointApplyExport" @click="exportApply">导出</el-button>
+            </el-form-item>
+        </el-form>
+        <div class="summary">第<b>{{pageSize*(page-1)+1}}-{{pageSize*page>total?total:pageSize*page}}</b>条，共<b>{{total}}</b>条数据.</div>
+        <template>
+            <el-table :data="tableData" stripe border style="width: 100%">
+            	<el-table-column width="50px" type="index" label="序号">
+                </el-table-column>
+                <el-table-column prop="apply_type" label="需求类别">
+                </el-table-column>
+                <el-table-column prop="intent_area" label="意向地区">
+                </el-table-column>
+                <el-table-column prop="mobile" label="手机号">
+                </el-table-column>
+                <el-table-column prop="create_time" label="申请时间">
+                </el-table-column>
+                <el-table-column prop="apply_content" label="需求详情">
+                </el-table-column>
+            </el-table>
+        </template>
+        <el-pagination background layout="prev, pager, next" :total="total" :page-size="pageSize" @current-change="pageJump"></el-pagination>
+    </div>
+</body>
+<script src="js/vue.js"></script>
+<script src="js/index.js"></script>
+<script src="js/vue-resource.js"></script>
+<script>
+var vm = new Vue({
+    el: '#app',
+    data:{
+        tableData: [],
+        formInline:{
+            apply_type:'',
+            mobile:'',
+            intent_area:'',
+        },
+        total: 0,
+        pageSize:10,
+        page:1,
+        pointApplyExport:0,
+        url:"",
+    },
+    methods: {
+      onSubmit() {
+      	this.getApplyList(1);
+      },
+      verifyUserAuth(){
+      	this.$http.post(
+      		"/common/verify-user-auth",
+      		{
+      			"pointApplyList":"点位申请",
+      			"pointApplyExport":"点位申请导出"
+      		},
+          	{emulateJSON:true}
+  		).then(function(data){
+        this.url=data.body.fcoffeeUrl;
+  			if (data.body.pointApplyList == 1) {
+      			this.getApplyList(1)
+  			} else {
+  				window.location.href="/site/login";
+  			}
+  			this.pointApplyExport=data.body.pointApplyExport;
+  		})
+      },
+      exportApply(){
+      	window.location.href=this.url+"erpapi/point-position/export-point-apply.html?mobile="+this.formInline.mobile+"&apply_type="+this.formInline.apply_type+"&intent_area="+this.formInline.intent_area;
+      },
+      getApplyList(page) {
+        this.$http.post(
+          this.url+"erpapi/point-position/get-apply-list.html",
+          {
+          	mobile:this.formInline.mobile,
+          	apply_type:this.formInline.apply_type,
+          	intent_area:this.formInline.intent_area,
+          	page:page,
+          },
+          {emulateJSON:true}
+        ).then(function(data){
+        	var dataList = data.body.data
+        	this.tableData=dataList.pointApplyList
+        	this.total=parseInt(dataList.total)
+        	this.pageSize=dataList.pageSize
+        })
+      },
+      pageJump(val){
+      	this.getApplyList(val);
+        this.page=val;
+      }
+    }
+})
+vm.verifyUserAuth(1);
+</script>
+
+</html>

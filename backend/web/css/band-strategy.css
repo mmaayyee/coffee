@@ -1,0 +1,84 @@
+.bordered{
+	position: relative;
+    margin: 15px 0;
+    padding: 39px 19px 14px;
+   	padding-top: 19px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+@media (min-width: 992px){
+	.bordered{
+		width:100%;
+		display:inline-block;		
+	}
+	.checkbox input[type="checkbox"]{
+		margin-left:-15px ;	
+	}
+	.checkbox label {
+		padding-left: 25px;
+	}
+	.bordered.form-inline  .form-group{
+		width:28%;
+		vertical-align: top;
+	}
+	.bordered.form-inline .form-control{
+		width:100%;
+		vertical-align: top;
+	}
+	.single .cycle  .form-group{
+		width:50%;
+		margin-right: 0;
+	}
+	.single .cycle .form-group .form-control{
+		width:87%;
+	}
+
+}
+.single .cycle>span,.bordered .start>span,.bordered .end>span{
+	display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+	vertical-align: top;
+    margin-top: 7px;   
+}
+.single .choice_band > label:first-child{ 
+	padding-left: 0;
+	font-weight: bold;
+}
+.bordered .start,.bordered .end{
+	width:47%;
+	display: inline-block;
+	padding-right: 1%;
+	vertical-align: top;
+}
+.margins{
+	margin-right:10px ;
+}
+#band .errs {
+	display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+	color:#a94442;
+}
+.btn-primary.add{
+	margin-bottom: 10px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.bordered .start, .bordered .end {
+	    width: 49%;
+	    padding-right: 0;
+	}
+	.bordered .start>span:nth-child(5),.bordered .end>span:nth-child(5){
+		margin-left:45px;
+		margin-top:16px;
+	}
+	.bordered .start>div:last-child,.bordered .end>div:last-child{
+		margin-top:8px;
+	}
+}
+.star-mark{
+	color:#FF9966;
+}

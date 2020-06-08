@@ -1,0 +1,32 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#app{
+	height: 100%;
+	width: 100%;
+}
+.el-form-item{
+    margin-bottom: 25px;
+}
+.content-body{
+	width: auto;
+	height: auto;
+	margin: 10px;
+	padding-bottom: 20px;
+}
+.line-title{
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+	font-size: 22px;
+}
+.text {
+  font-size:14px;
+  color:#606266;
+}
+.select-txt {
+  /*width:120px;*/
+  /*text-align: right;*/
+  padding: 10px;
+}

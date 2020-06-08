@@ -1,0 +1,103 @@
+@media (min-width: 768px){
+  /*产品组*/
+    .product-group, .row-fluid{
+        font-size: 0;
+    }
+    .product-group > div {
+        font-size: 14px;
+        width: 50%;
+    }
+    .product-group > .form-group .form-control{
+        width: 70%;
+    }
+    .row-fluid > div {
+        width: 33.3%;
+        font-size: 14px;
+    }
+    .row-fluid  div {
+        display: inline-block;
+    }
+    .row-fluid > div > input, .row-fluid > div > select{
+        display: inline-block;
+        width: 50%;
+    }
+    .product-list .panel-heading {
+        margin-bottom: 0 ;
+        font-weight: bold;
+        padding:10px 0 5px ;
+    }
+    .choose-sugar .form-control{
+        width:90px;
+    }
+    .productNum{
+        margin: 7px 10px 0 10px;
+    }
+    .form-inline div.checkbox{
+        display: block;
+    }
+    .equipment-label .label-group > div {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+    .label-group > .form-inline {
+        border-bottom: 1px dashed #ddd;
+    }
+    .label-group > .form-inline:last-child{
+        border-bottom: 0;
+    }
+    #add-tags {
+        margin-left: 15px;
+    }
+}
+.field-equipmentproductgrouplist-group_coffee_cover input[type="file"] {
+    display:none;
+}
+.field-equipmentproductgrouplist-group_coffee_flowchart input[type="file"] {
+    display:none;
+}
+.row-fluid .select2-search {
+    position: relative;
+    top: 6px;
+}
+.row-fluid .has-error .select2-search #valierr{
+    position: absolute;
+    top: 34px;
+}
+.submit-error{
+    color: #a94442;
+}
+
+/*特价排期页面*/
+.field-equipmentproductgrouplist-group_coffee_cover{display: none;}
+.set-up-activity select.form-control{
+    display: inline-block;
+    width: 200px;
+}
+.special-schedul-form .productList td,th{
+    text-align:center;
+}
+.special-schedul-form .limit-condition > .form-inline{
+    margin-bottom: 10px;
+}
+.special-schedul-form .limit-condition {
+    margin-left: 80px;
+}
+.special-schedul-form .limit{
+    margin-left: 20px;
+}
+.specialSchedul h5{
+    font-size: 18px;
+    font-weight: bold;
+}
+.special-schedul-form .limit input{
+    margin-left: 5px;
+}
+.field-specialschedul-start_time,.field-specialschedul-end_time{
+    width:33%;
+}
+.field-specialschedul-start_time.has-error, .field-specialschedul-end_time.has-error{
+    margin-bottom: 20px;
+}
+.restriction-list {
+    margin-right: 10px;
+}

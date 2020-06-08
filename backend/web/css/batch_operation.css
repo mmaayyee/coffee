@@ -1,0 +1,55 @@
+.block-a{
+	clear: all;
+}
+.searchResult, .no-data{
+	width:45%;
+	float: left;
+	max-height: 1100px;
+}
+.unionPay, .no-data{
+	width:45%;
+	float: left;
+	max-height: 1100px;
+}
+.addPreview {
+	width:45%;
+	float: right;
+	min-height: 1100px;
+}
+.addPreview .overflow{
+   max-height:990px;
+   overflow: auto;
+   margin-bottom: 10px;
+}
+.addPreview tbody {
+	counter-reset:sectioncounter;
+}
+.addPreview .SortId:before {
+   content:counter(sectioncounter);
+   counter-increment:sectioncounter;
+}
+.searchResult .SortId:before {
+   content: attr(data-text);
+}
+.no-data {
+        display: none;
+        margin: 10px 0;
+    }
+@media (min-width: 768px) {
+	.form-inline .form-group{
+		margin-bottom: 10px;
+		width:24%;
+		text-align: right;;
+	}
+	.form-inline label{
+		width:30%;
+	}
+	.form-inline .form-control{
+		width:65%;
+	}
+}
+.btn-primary.search{
+	margin-left: 20px;
+	margin-bottom:10px;
+}
+
